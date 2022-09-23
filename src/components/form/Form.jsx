@@ -1,8 +1,7 @@
 // Import Modules
 import React from 'react'
 import './form.css'
-import { useState, useEffect } from 'react'
-import Todo from '../todo/Todo'
+import { useState } from 'react'
 
 const Form = ({createTodoItem}) => {
   const [value, setValue] = useState("")

@@ -1,7 +1,7 @@
 import Form from './components/form/Form.jsx'
 import Todo from './components/todo/Todo.jsx'
 import './App.css'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 function App() {
   const [todoItems, setTodoItems] = useState(
