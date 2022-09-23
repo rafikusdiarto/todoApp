@@ -1,37 +1,29 @@
 import React from 'react'
 import "./todo.css"
 
-const Todo = ({data, deleteItem}) => {
-   
+const Todo = ({item, index, deleteTodoItems, updateTodoItem}) => {
+
   return (
     <>
-      <div class="row mb-2">
-        <div class="col">
-          <div class="row ms-2">
-            <div class="col list">
-              <h4>Makan</h4>
-            </div>
-            <div class="col-3 list ms-2 text-center">
-              <h4>Penting</h4>
-            </div>
-            <div class="col-3">
-              <button class="btn btn-warning me-2" type="submit">
-                Edit
-                <i class="ms-1 fa-solid fa-pen-to-square"></i>
-              </button>
-              <button class="btn btn-danger" type="submit">
-                Delete
-                <i class="ms-1 fa-regular fa-trash-can"></i>
-              </button>
-            </div>
-          </div>
+      <li class="row mb-3 ms-2">
+        <div class="col list">
+          <h4>{item.todo}</h4>
         </div>
-      </div>
-      {/* mengambil dari data di main form */}
-      {/* {data && data.map((tugasBaru) => {
-        return(
-        ); */}
-      ;
+        {/* <div class="col-3 list ms-2 text-center">
+          <h4>Penting</h4>
+        </div> */}
+        <div class="col-3">
+          <button onClick={() => updateTodoItem(index)} class="btn btn-warning me-2" >
+            Edit
+            <i class="ms-1 fa-solid fa-pen-to-square"></i>
+          </button>
+          <button onClick={()=> deleteTodoItems(index)} class="btn btn-danger" >
+            Delete
+            <i class="ms-1 fa-regular fa-trash-can"></i>
+          </button>
+        </div>
+      </li>
+
     </>
   )
 }
