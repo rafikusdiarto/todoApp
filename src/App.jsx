@@ -15,6 +15,7 @@ function App() {
     const deleteTodoItems = (index) => {
       const newTodoItems= [...todoItems]
       newTodoItems.splice(index,1)
+      alert("This activity will delete")
       setTodoItems(newTodoItems)
     }
 
@@ -22,7 +23,7 @@ function App() {
       const newTodoItems = [...todoItems];
       const item = newTodoItems[index];
 
-      let newItem = prompt(`Update ${item.todo}?`, item.todo);
+      let newItem = prompt(`Edit ${item.todo}?`, item.todo);
       let todoObj = { todo: newItem};
       newTodoItems.splice(index, 1, todoObj);
       if (newItem === null || newItem === "") {
