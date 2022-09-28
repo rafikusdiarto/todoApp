@@ -14,8 +14,15 @@ function App() {
 
     const deleteTodoItems = (index) => {
       const newTodoItems= [...todoItems]
-      newTodoItems.splice(index,1)
+      let text= "You want to delete this item?"
+      if (window.confirm(text) === true) {
+        text = "You pressed OK!";
+        newTodoItems.splice(index,1)
+      } else {
+        text = "You canceled!";
+      }
       setTodoItems(newTodoItems)
+
     }
 
     const updateTodoItem = (index) => {
