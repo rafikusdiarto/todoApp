@@ -9,7 +9,7 @@ const CreateList = () => {
     {
       id : '',
       tugas : '',
-      kondisi : '',
+      // kondisi : '',
     });
   // create onSubmit handler
   const onSubmit = tugasObject => {
@@ -22,12 +22,13 @@ const CreateList = () => {
       })
       .catch(err => alert("something wrong"))
   }
+  
   return (
-    <MainForm initialValues= {formValues}
+    <Form initialValues= {formValues}
     onSubmit={onsubmit}
     enableReinitialize>
         Create
-    </MainForm>
+    </Form>
   )
 }
 
